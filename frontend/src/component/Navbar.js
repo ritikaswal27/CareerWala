@@ -229,6 +229,33 @@ const Navbar = () => {
                 </Typography>
               </MenuItem>
 
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Typography textAlign='center'>
+                  <Link
+                    style={{
+                      textDecoration: 'none',
+                      color: palette.secondary.main,
+                    }}
+                    to='/about-us'
+                  >
+                    About Us
+                  </Link>
+                </Typography>
+              </MenuItem>
+
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Typography textAlign='center'>
+                  <Link
+                    style={{
+                      textDecoration: 'none',
+                      color: palette.secondary.main,
+                    }}
+                    to='/contact-us'
+                  >
+                    Contact Us
+                  </Link>
+                </Typography>
+              </MenuItem>
               {!userInfo ? (
                 <>
                   <MenuItem onClick={handleCloseUserMenu}>

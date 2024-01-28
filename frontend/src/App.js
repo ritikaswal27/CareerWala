@@ -22,7 +22,7 @@ import Register from './pages/Register';
 import DashCategory from './pages/admin/DashCategory';
 import DashCreateJob from './pages/admin/DashCreateJob';
 import DashCreateCategory from './pages/admin/DashCreateCategory';
-
+import AboutUs from './pages/global/AboutUs';
 import { createTheme } from '@mui/material/styles';
 import { themeColors } from './theme';
 import { useSelector } from 'react-redux';
@@ -137,6 +137,7 @@ const App = () => {
                   </UserRoute>
                 }
               />
+              <Route path='/about-us' element={<AboutUs />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
           </BrowserRouter>
