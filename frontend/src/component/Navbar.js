@@ -46,6 +46,10 @@ const Navbar = () => {
     setAnchorElUser(null);
   };
 
+  const handleMailToClick = () => {
+    window.location.href = 'mailto:contact@careerwala.com';
+  };
+
   // log out user
   const logOutUser = () => {
     dispatch(userLogoutAction());
@@ -243,14 +247,13 @@ const Navbar = () => {
                 </Typography>
               </MenuItem>
 
-              <MenuItem onClick={handleCloseUserMenu}>
+              <MenuItem onClick={handleMailToClick}>
                 <Typography textAlign='center'>
                   <Link
                     style={{
                       textDecoration: 'none',
                       color: palette.secondary.main,
                     }}
-                    to='/contact-us'
                   >
                     Contact Us
                   </Link>
