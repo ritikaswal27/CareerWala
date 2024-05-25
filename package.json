@@ -7,7 +7,7 @@
     "start": "node backend/app.js",
     "server": "nodemon backend/app.js"
   },
-  "author": "Emmann",
+  "author": "ritik",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
