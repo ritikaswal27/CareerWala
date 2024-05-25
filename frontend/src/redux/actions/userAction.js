@@ -20,6 +20,7 @@ import {
   USER_SIGNUP_REQUEST,
   USER_SIGNUP_SUCCESS,
 } from '../constants/userConstant';
+import { useSelector } from 'react-redux';
 
 export const userSignInAction = (user) => async (dispatch) => {
   dispatch({ type: USER_SIGNIN_REQUEST });
@@ -115,7 +116,14 @@ export const allUserAction = () => async (dispatch) => {
 };
 
 //user job apply action
+
 export const userApplyJobAction = (job) => async (dispatch) => {
+  const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+
+  if (!userInfo) {
+    toast.error('You must log in!');
+    return;
+  }
   dispatch({ type: USER_APPLY_JOB_REQUEST });
   try {
     const { data } = await axios.post('/api/user/jobhistory', job);
